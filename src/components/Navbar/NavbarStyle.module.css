@@ -1,6 +1,5 @@
-/* Estilos base */
 .navbar {
-  position: fixed;
+  position: sticky !important; /* !important después de la propiedad */
   top: 0;
   width: 100%;
   background-color: #ebebec;
@@ -8,6 +7,7 @@
   z-index: 1000;
   box-shadow: 0 4px 8px rgba(170, 176, 207, 0.2);
 }
+
 
 .navbarContainer {
   display: flex;

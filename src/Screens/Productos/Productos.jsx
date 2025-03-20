@@ -1,9 +1,12 @@
 import React from 'react'
+import ProductGrid from '../../components/ProductGrid/ProductGrid';
+import MisionVision from '../../components/MisionVision/MisionVision';
 
 const Productos = () => {
   return (
-    <div>
-       <h1>Nuestros productos</h1>
+    <div>   
+      <MisionVision />
+       <ProductGrid />
     </div>
   )
 }

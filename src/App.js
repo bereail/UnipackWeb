@@ -6,6 +6,8 @@ import Inicio from './Screens/Inicio/Inicio';
 import Productos from './Screens/Productos/Productos';
 import Nosotros from './Screens/Nosotros/Nosotros';
 import NuestrosClientes from './Screens/NuestrosClientes/NuestrosClientes';
+import ProductDetail from './components/ProductDetail/ProductDetail';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -14,30 +16,32 @@ function App() {
         <Navbar />
         <main style={{ flex: 1 }}>
           <Routes>
-            <Route
-              path="/"
-              element={
-                <div>
-                  <section id='Inicio'>
-                    <Inicio />
-                  </section>
-                  <section id="Productos">
-                    <Productos />
-                  </section>
-                  <section id="Nosotros">
-                    <Nosotros />
-                  </section>
-                  <section id="NuestrosClientes">
-                    <NuestrosClientes />
-                  </section>
-                  <section id="Contacto">
-                    <Contacto />
-                  </section>
-                </div>
-              }
-            />
+            {/* Home and other sections */}
+            <Route path="/" element={
+              <div>
+                <section id="Inicio">
+                  <Inicio />
+                </section>
+                <section id="Productos">
+                  <Productos />
+                </section>
+                <section id="NuestrosClientes">
+                  <NuestrosClientes />
+                </section>
+                <section id="Contacto">
+                  <Contacto />
+                </section>
+              </div>
+            } />
+            
+             {/* Product detail route */}
+             <Route path="/product/:id" element={<ProductDetail />} />
+            
+            {/* About us page */}
+            <Route path="/nosotros" element={<Nosotros />} />
           </Routes>
         </main>
+        <Footer />
       </div>
     </Router>
   );
