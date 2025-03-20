@@ -1,11 +1,11 @@
-import React from 'react'
+import BrandDisplay from "../../components/BrandDisplay/BrandDisplay";
 
 const NuestrosClientes = () => {
   return (
     <div>
-       <h1>Nuestros Clientes</h1>
+      <BrandDisplay />
     </div>
-  )
-}
+  );
+};
 
-export default NuestrosClientes
+export default NuestrosClientes;
