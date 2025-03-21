@@ -3,7 +3,6 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './nosotros.css';
 import useObserver from '../../Hooks/useObserver';
-import MisionVision from '../../components/MisionVision/MisionVision';
 
 
 function Nosotros() {
