@@ -1,46 +1,58 @@
-// src/components/ProductGrid.js
 import React, { useState } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import products from "../../Data/Products";
+import styles from "./ProductGrid.module.css"; // Importamos CSS personalizado
 
 const ProductGrid = () => {
   const [hovered, setHovered] = useState(null);
 
   return (
-    <Container className="my-5">
-      <h2 className="text-center fw-bold">ALGUNOS DE NUESTROS PRODUCTOS</h2>
-      <Row className="mt-3 gx-1">
-        {products.map((product) => (
-          <Col key={product.id} md={4} className="mb-1">
-            <Card
-              className={`h-100 text-center shadow-sm ${
-                hovered === product.id ? "shadow-lg" : ""
-              }`}
-              style={{
-                transform: hovered === product.id ? "scale(0.80)" : "scale(0.70)",
-                transition: "all 0.3s ease-in-out",
-              }}
-              onMouseEnter={() => setHovered(product.id)}
-              onMouseLeave={() => setHovered(null)}
+    <section className={styles.sectionProductos}>
+      <h2 className={styles.titulo}>Algunos de nuestros productos</h2>
+      <Container>
+        <Row className="justify-content-center">
+          {products.map((product) => (
+            <Col
+              key={product.id}
+              xs={12}
+              sm={6}
+              md={4}
+              lg={3}
+              className={styles.colItem}
             >
-              <Card.Img variant="top" src={product.img} alt={product.name} />
-              <Card.Body>
-                <Card.Title className="fw-semibold">{product.name}</Card.Title>
-                <Link to={`/product/${product.id}`}>
-                  <Button
-                    variant={hovered === product.id ? "dark" : "danger"}
-                    className="mt-1"
-                  >
-                    CONSULTAR
-                  </Button>
-                </Link>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
-    </Container>
+              <Card
+                className={`${styles.cardProducto} ${
+                  hovered === product.id ? styles.hovered : ""
+                }`}
+                onMouseEnter={() => setHovered(product.id)}
+                onMouseLeave={() => setHovered(null)}
+              >
+                <Card.Img
+                  variant="top"
+                  src={product.img}
+                  alt={product.name}
+                  className={styles.imgProducto}
+                />
+                <Card.Body className="text-center">
+                  <Card.Title className={styles.tituloProducto}>
+                    {product.name}
+                  </Card.Title>
+                  <Link to={`/product/${product.id}`}>
+                    <Button
+                      variant="dark"
+                      className={styles.btnConsultar}
+                    >
+                      CONSULTAR
+                    </Button>
+                  </Link>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </Container>
+    </section>
   );
 };
 

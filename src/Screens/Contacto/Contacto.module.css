@@ -1,0 +1,76 @@
+.sectionContacto {
+    padding: 80px 20px;
+    background-color: #fdf7f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .containerContacto {
+    max-width: 720px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 50px 40px;
+    border-radius: 16px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .containerContacto:hover {
+    transform: translateY(-2px);
+  }
+  
+  .titleContacto {
+    color: #3b2b1f;
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .datosContacto {
+    text-align: left;
+    font-size: 1.05rem;
+    color: #444;
+    margin-bottom: 30px;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.7;
+  }
+  
+  .datosContacto strong {
+    color: #5a3d2b;
+  }
+  
+  .btnContactar {
+    background-color: #8a6141;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 12px 30px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btnContactar:hover {
+    background-color: #5a3d2b;
+    transform: scale(1.05);
+  }
+  
+  @media (max-width: 768px) {
+    .containerContacto {
+      padding: 30px 20px;
+    }
+  
+    .titleContacto {
+      font-size: 1.8rem;
+    }
+  
+    .btnContactar {
+      width: 100%;
+    }
+  }
+  

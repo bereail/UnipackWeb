@@ -1,0 +1,46 @@
+.container {
+    min-height: 100vh;
+    background-color: #fffdf8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .logo {
+    max-width: 140px;
+    margin-bottom: 30px;
+  }
+  
+  .titulo {
+    font-size: 2.2rem;
+    color: #8a6141;
+    font-weight: 800;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .texto {
+    font-size: 1.1rem;
+    color: #444;
+    max-width: 600px;
+    line-height: 1.6;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  @media (max-width: 768px) {
+    .titulo {
+      font-size: 1.8rem;
+    }
+  
+    .texto {
+      font-size: 1rem;
+    }
+  
+    .logo {
+      max-width: 100px;
+    }
+  }
+  
