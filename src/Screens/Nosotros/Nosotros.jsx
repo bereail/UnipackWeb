@@ -1,69 +1,43 @@
-// Nosotros.js
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './nosotros.css';
 import useObserver from '../../Hooks/useObserver';
 
-
 function Nosotros() {
   const [isCardVisible, cardRef] = useObserver();
-
   const [isTitleVisible, setIsTitleVisible] = React.useState(false);
 
   React.useEffect(() => {
-    // Hacer que el título se vuelva visible después de un tiempo
     const timer = setTimeout(() => {
       setIsTitleVisible(true);
-    }, 500); // El título aparece después de 500ms
+    }, 500);
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div className="container-nosotros">
-
-      <div className="banner-nosotros">
-        <div className="banner-image"></div>
-        <h3 className="text-overlay">
-          <span className="sobre">SOBRE</span>
-          <span className="nosotros">NOSOTROS</span>
-        </h3>
-      </div>
-
-
-      <div className='quienes-somos'>
-        <h3 className={`title-nosotros ${isTitleVisible ? 'animate' : ''}`}>
-          ¿Quiénes Somos?
-        </h3>
-
-        <section
-          className={`section descripcion-empresa ${isTitleVisible ? 'fadeIn' : ''}`}
+    <section id="Nosotros" className="nosotros-section">
+      <div className="nosotros-container">
+        <h2 className={`nosotros-title ${isTitleVisible ? 'visible' : ''}`}>
+          QUIENES SOMOS
+        </h2>
+        <h3 className="nosotros-subtitle">NUESTRA EMPRESA</h3>
+        <div
+          ref={cardRef}
+          className={`nosotros-content ${isCardVisible ? 'fade-in' : ''}`}
         >
-          <div
-            ref={cardRef}
-            className={`card-descripcion-empresa ${isCardVisible ? 'animate' : ''}`}
-          >
-            <p>
-              <strong>ULTRACORR SAS</strong> es una Empresa dedicada la fabricación de Envases especiales y a dar soluciones de packaging sostenible.
-            </p>
-            <p>
-              Nuestros productos y servicios están dirigidos tanto al mercado local como al internacional, buscando satisfacer las demandas de un público diverso y exigente, manteniendo un compromiso constante con la excelencia y la mejora continua.
-            </p>
-            <p>
-              Nos distinguimos por nuestra calidad, eficiencia y precios competitivos, elementos que nos posicionan como una opción preferente en el mercado.
-            </p>
-            <p>Para ello ofrecemos una solución de alta calidad en el diseño y desarrollo de envases de cartón corrugado, con soluciones individuales para desafíos en el packaging de su Empresa.</p>
-          </div>
-          <button className="btn-contacto" onClick={() => {
-            const contactoSection = document.getElementById('contacto');
-            if (contactoSection) {
-              contactoSection.scrollIntoView({ behavior: 'smooth' });
-            }
-          }}>
-            Contáctenos
-          </button>
-        </section>
+          <p>
+            Unipack es una empresa dedicada a la fabricación y comercialización de cajas y envases de cartón corrugado. Nuestra planta de 8.000 m² está ubicada en un predio de 2 hectáreas en Granadero Baigorria, provincia de Santa Fe.
+          </p>
+          <p>
+            Actualmente, nuestra capacidad productiva excede los más de 50.000.000 de metros cuadrados de cartón al año.
+          </p>
+        </div>
+
+        <div className="certificaciones-container">
+          <button className="btn-certificado">CERTIFICACIONES</button>
+          <button className="btn-certificado">CERTIFICACIONES</button>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 

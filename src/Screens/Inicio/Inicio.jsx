@@ -2,6 +2,15 @@ import React from 'react';
 import styles from './Inicio.module.css';
 
 function Inicio() {
+
+  const handleClick = () => {
+    const section = document.getElementById('Productos');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  
   return (
     <section className={styles.inicioSection}>
       <div className={styles.inicioContent}>
@@ -13,7 +22,10 @@ function Inicio() {
         <p className={styles.inicioParagraphExplora}>
           Creamos envases de cartón corrugado que impulsan tu negocio. Diseño, calidad y sustentabilidad a medida.
         </p>
-        <button className={styles.verProductos}>VER PRODUCTOS</button>
+        <button className={styles.verProductos} onClick={handleClick}>
+  VER PRODUCTOS
+</button>
+
       </div>
       <div className={styles.inicioImagen}></div>
     </section>
