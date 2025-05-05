@@ -1,4 +1,4 @@
-import './App.css';
+/*import './App.css';
 import PaginaEnConstruccion from './Screens/PaginaEnConstruccion/PaginaEnConstruccion';
 
 function App() {
@@ -7,8 +7,8 @@ function App() {
   );
 }
 
-export default App;/*
-
+export default App;
+*/
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
@@ -80,4 +80,3 @@ function App() {
 }
 
 export default App;
-*/
