@@ -1,0 +1,73 @@
+.sectionProductos {
+    padding: 60px 20px;
+    background-color: #fff9f4;
+    border-top: 3px solid #a46f43;
+  }
+  
+  .titulo {
+    text-align: center;
+    font-weight: 800;
+    font-size: 2rem;
+    color: #3b2b1f;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+  
+  .colItem {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .cardProducto {
+    width: 100%;
+    max-width: 260px;
+    transition: all 0.3s ease;
+    border: 1px solid #e0d4c8;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .cardProducto:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .imgProducto {
+    padding: 20px;
+    height: 200px;
+    object-fit: contain;
+  }
+  
+  .tituloProducto {
+    font-size: 1rem;
+    color: #3b2b1f;
+    font-weight: 600;
+    min-height: 50px;
+  }
+  
+  .btnConsultar {
+    background-color: #8a6141;
+    border: none;
+    padding: 6px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btnConsultar:hover {
+    background-color: #5f3d29;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .titulo {
+      font-size: 1.5rem;
+    }
+  
+    .imgProducto {
+      height: 160px;
+    }
+  }
+  

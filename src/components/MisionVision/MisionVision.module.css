@@ -1,0 +1,122 @@
+.sectionFilosofiaContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 60px;
+  padding: 60px 80px;
+  background-color: #fff;
+  flex-wrap: wrap;
+  border-top: 3px solid #a46f43;
+  border-bottom: 3px solid #a46f43;
+}
+
+.logoContainer {
+  flex: 1 1 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+}
+
+.contentFilosofiaContainer {
+  flex: 2 1 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contentFilosofia {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  background-color: #fdf8f4;
+  padding: 24px 36px;
+  border-radius: 12px;
+  border-left: 8px solid #8a6141;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.slideLeft {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slideRight {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.title {
+  color: #8a6141;
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  font-weight: 800;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.description {
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.6;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+@media (max-width: 1080px) {
+  .sectionFilosofiaContainer {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+
+  .contentFilosofiaContainer {
+    align-items: center;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .img {
+    max-width: 160px;
+  }
+
+  .contentFilosofia {
+    padding: 16px 20px;
+    border-left: 5px solid #8a6141;
+  }
+
+  .title {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .description {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .img {
+    max-width: 120px;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+}

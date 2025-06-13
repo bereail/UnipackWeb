@@ -1,0 +1,90 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(to right, #f9e3b5, #c2976b, #8a6141);
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 12px 0; /* 🔼 Nuevo: da más aire vertical */
+}
+
+.navbarContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px; /* 🔼 Más padding horizontal y vertical */
+}
+
+.logo {
+  height: 72px;
+  margin-right: 20px; /* 🔧 mejora el espaciado */
+}
+
+.navbarLinks {
+  display: flex;
+  gap: 32px; /* 🔼 Más espacio entre links */
+}
+
+.navLink {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 16px; /* 🔼 Antes era 14px */
+  color: #3a2a17;
+  background: transparent;
+  padding: 10px 18px; /* 🔼 Más padding */
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.activeLink {
+  background-color: #5a3d2b;
+  color: white;
+}
+
+.navLink:hover {
+  background-color: rgba(90, 61, 43, 0.1);
+}
+
+/* Responsive */
+.menuButton {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .menuButton {
+    display: block;
+  }
+
+  .logo {
+    height: 60px; /* 🔼 También un poco más grande en mobile */
+  }
+
+  .navbarLinks {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background: #fff;
+    width: auto;
+    padding: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .navbarLinks.active {
+    display: flex;
+  }
+
+  .navLink {
+    margin: 8px 0;
+    font-size: 15px; /* 🔼 Un poco más grande en mobile también */
+  }
+}

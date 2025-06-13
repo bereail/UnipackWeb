@@ -1,0 +1,22 @@
+.footer {
+  background-color: #3b2b1f; /* Marrón oscuro */
+  color: #fdf8f4; /* Beige claro */
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.95rem;
+  font-family: 'Segoe UI', sans-serif;
+  border-top: 3px solid #a46f43;
+  margin-top: 60px;
+}
+
+.footer p {
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    font-size: 0.85rem;
+    padding: 16px 10px;
+  }
+}

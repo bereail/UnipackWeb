@@ -1,0 +1,45 @@
+.brandSection {
+    padding: 60px 20px;
+    background-color: #fffdf8;
+    border-top: 3px solid #a46f43;
+    border-bottom: 3px solid #a46f43;
+  }
+  
+  .title {
+    text-align: center;
+    color: #3b2b1f;
+    font-weight: 800;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  
+  .clientLogo {
+    width: 100%;
+    max-width: 130px;
+    height: auto;
+    display: block;
+    margin: auto;
+    transition: transform 0.3s ease;
+    filter: grayscale(40%);
+  }
+  
+  .clientLogo:hover {
+    transform: scale(1.1);
+    filter: none;
+  }
+  
+  /* Estilo para flechas */
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #3b2b1f;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
+    }
+  }
+  

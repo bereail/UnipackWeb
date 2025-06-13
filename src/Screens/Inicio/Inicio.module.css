@@ -1,0 +1,56 @@
+.inicioSection {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    background-color: white;
+  }
+  
+  .inicioContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+    text-align: left;
+  }
+  
+  .inicioTitle {
+    font-size: 2rem;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .inicioSlogan {
+    line-height: 1.4;
+  }
+  
+  .inicioParagraphExplora {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .verProductos {
+    background-color: #5a3d2b;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .verProductos:hover {
+    background-color: #3a271a;
+  }
+  
+  .inicioImagen {
+    flex: 1;
+    background-image: url('../../assets/img/fondo-corrugado.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  

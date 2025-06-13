@@ -1,0 +1,55 @@
+.nosotros-section {
+  background: #fffaf6;
+  padding: 80px 20px;
+  border-top: 3px solid #b37b3f;
+}
+
+.nosotros-container {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.nosotros-title {
+  font-size: 2.8rem;
+  color: #3b2b1f;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.nosotros-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #654321;
+  margin-bottom: 2rem;
+}
+
+.nosotros-section p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.certificaciones-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-certificado {
+  background-color: #ccc;
+  border: none;
+  border-radius: 20px;
+  padding: 15px 30px;
+  font-weight: bold;
+  color: white;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-certificado:hover {
+  background-color: #999;
+}
